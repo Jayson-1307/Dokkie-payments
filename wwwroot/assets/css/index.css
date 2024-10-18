@@ -8,7 +8,7 @@
     --secondary-color-dark: #c22c6e;
 }
 
-a:hover{
+a:hover {
     scale: 1.1;
 }
 
@@ -52,7 +52,7 @@ body {
     margin: 0;
     display: flex;
     flex-direction: column;
-    min-height: 100vh; /* Ensure body takes full height */
+    min-height: 100vh;
 }
 
 nav {
@@ -77,7 +77,7 @@ nav ul {
 }
 
 nav ul li {
-    margin-right: 16px
+    margin-right: 16px;
 }
 
 nav ul li a {
@@ -100,11 +100,9 @@ main {
     flex: 1;
     display: flex;
     flex-direction: column;
-    /* justify-content: center; */
-    /* align-items: center; */
-
 }
 
+/* Navbar and footer */
 .navbar {
     display: flex;
     justify-content: space-between;
@@ -119,18 +117,22 @@ main {
     text-decoration: none;
 }
 
+.footer {
+    background-color: #007bff;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+}
+
+/* Call to action (cta) section */
 section.cta {
     background-color: var(--secondary-color);
     color: #ffffff;
     text-align: center;
     padding: 20px;
-    position: relative;
-    left: 50%;
-    right: 50%;
     margin-left: -50vw;
     margin-right: -50vw;
     width: 100vw;
-    
 }
 
 section.cta a {
@@ -140,15 +142,108 @@ section.cta a {
 
 section.cta a:hover {
     text-decoration: underline;
-
 }
 
+/* Page-specific styles */
 
+/* Outing Overview Page */
+#outingsList {
+    margin-top: 20px;
+}
 
+#outingsList div {
+    background-color: var(--primary-color-light);
+    padding: 16px;
+    margin-bottom: 16px;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
 
-.footer {
-    background-color: #007bff; /* Footer background color */
-    color: white; /* Footer text color */
-    text-align: center; /* Centered text */
-    padding: 10px 0; /* Padding for the footer */
+#outingsList h3 {
+    color: #ffffff;
+    margin: 0;
+}
+
+#outingsList button {
+    background-color: var(--secondary-color);
+    border: none;
+    color: white;
+    padding: 8px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+#outingsList button:hover {
+    background-color: var(--secondary-color-dark);
+}
+
+/* Outing Detail Page */
+#outingDetails {
+    background-color: var(--primary-color-light);
+    padding: 16px;
+    border-radius: 8px;
+    color: white;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+#outingDetails h2 {
+    margin: 0;
+}
+
+form {
+    margin-bottom: 20px;
+    background-color: #f8f8f8;
+    padding: 16px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+form label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+form input, form select {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+form button {
+    background-color: var(--primary-color);
+    border: none;
+    color: white;
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: var(--primary-color-dark);
+}
+
+/* Activity list and participant spending */
+#activitiesList, #participantSpending {
+    background-color: #e9ffe6;
+    padding: 16px;
+    border-radius: 8px;
+    margin-top: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+#activitiesList p, #participantSpending p {
+    margin: 0;
+    padding: 8px 0;
+    border-bottom: 1px solid #ccc;
+}
+
+#activitiesList p:last-child, #participantSpending p:last-child {
+    border-bottom: none;
 }
