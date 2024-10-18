@@ -8,6 +8,8 @@ const participantInput = document.getElementById('participantName');
 
 const submitOutingButton = document.getElementById('submitOuting');
 
+const participantsList = document.getElementById('participantsList');
+
 let outingName = '';
 let participants = []; 
 let activities = [];  // Initialize activities array for future use
@@ -69,6 +71,7 @@ participantButton.addEventListener('click', () => {
     } else {
         participants.push(participantInput.value);  // Add participant to the array
         participantInput.value = '';  // Clear the input field
+        participantsList.innerHTML = participants.map(p => `<li>${p}</li>`).join('');  // Render the updated list of participants
         console.log(participants);
     }
 });

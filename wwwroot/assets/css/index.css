@@ -247,3 +247,12 @@ form button:hover {
 #activitiesList p:last-child, #participantSpending p:last-child {
     border-bottom: none;
 }
+
+#participantsList {
+    padding-left: 20px;
+    color:var(--secondary-color);
+}
+
+#participantsList li::marker {
+    color:var(--primary-color);
+}
