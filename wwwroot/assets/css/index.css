@@ -23,6 +23,7 @@ body {
 
 a:hover {
     scale: 1.1;
+    text-decoration: none;
 }
 
 section {
@@ -36,11 +37,19 @@ main {
     flex-direction: column;
 }
 
+i {
+    margin-left: 10px;
+}
+
 .btn {
     color: #ffffff;
     padding: 8px 16px;
     border-radius: 4px;
     cursor: pointer;
+}
+
+.btn:hover {
+    scale: 1.1;
 }
 
 .btn-primary {
@@ -66,6 +75,46 @@ main {
     background-color: var(--secondary-color-dark);
 }
 
+nav {
+    display: flex;
+    background-color: #351fb7;
+    color: #ffffff;
+    padding: 0px 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+nav p {
+    font-weight: bold;
+    margin-right: 16px;
+    text-shadow: 2px 2px #000000;
+    pointer-events: none;
+}
+
+nav ul {
+    display: flex;
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    margin-right: 16px;
+}
+
+nav ul li a {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav ul li a:hover, nav ul li a.nav-link.active {
+    color: var(--primary-color-dark) !important;
+    text-decoration: underline;
+}
+
+nav ul li a:hover {
+    scale: 1.1;
+}
+
 .navbar {
     display: flex;
     justify-content: space-between;
@@ -80,11 +129,15 @@ main {
     text-decoration: none;
 }
 
-.footer {
-    background-color: #007bff;
-    color: white;
+footer {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
     text-align: center;
-    padding: 10px 0;
+    padding: 15px 0;
+}
+
+footer p {
+    margin: auto 0;
 }
 
 form {

@@ -1,4 +1,12 @@
-
+.introduction {
+    /* background-color: var(--primary-color); */
+    /* color: #ffffff; */
+    text-align: center;
+    padding: 20px;
+    margin-left: -50vw;
+    margin-right: -50vw;
+    /* width: 100vw; */
+}
 
 /* Homepage cta Section */
 section.cta {
@@ -16,6 +24,6 @@ section.cta a {
     text-decoration: none;
 }
 
-section.cta a:hover {
-    text-decoration: underline;
+section.cta button:hover {
+    scale: 1.1;
 }
