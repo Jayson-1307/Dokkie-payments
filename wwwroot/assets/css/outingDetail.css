@@ -1,0 +1,56 @@
+#outingDetails {
+    background-color: var(--primary-color-light);
+    padding: 16px;
+    border-radius: 8px;
+    color: white;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+#outingDetails h2 {
+    margin: 0;
+}
+
+#activitiesList, #participantSpending {
+    background-color: #e9ffe6;
+    padding: 16px;
+    border-radius: 8px;
+    margin-top: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+#activitiesList p, #participantSpending p {
+    margin: 0;
+    padding: 8px 0;
+    border-bottom: 1px solid #ccc;
+}
+
+#activitiesList p:last-child, #participantSpending p:last-child {
+    border-bottom: none;
+}
+
+#owingCalculations {
+    background-color: var(--secondary-color-light);
+    color: #fff;
+    padding: 16px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+#owingCalculations h3 {
+    margin-top: 0;
+}
+
+#owingCalculations ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+#owingCalculations ul li {
+    background-color: var(--secondary-color-dark);
+    padding: 10px;
+    border-radius: 4px;
+    margin-bottom: 10px;
+    color: white;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+}

@@ -1,0 +1,9 @@
+#participantsList {
+    padding-left: 20px;
+    color:var(--secondary-color);
+}
+
+#participantsList li::marker {
+    color:var(--primary-color);
+}
+

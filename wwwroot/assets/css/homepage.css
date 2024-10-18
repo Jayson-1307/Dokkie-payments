@@ -1,0 +1,21 @@
+
+
+/* Homepage cta Section */
+section.cta {
+    background-color: var(--secondary-color);
+    color: #ffffff;
+    text-align: center;
+    padding: 20px;
+    margin-left: -50vw;
+    margin-right: -50vw;
+    /* width: 100vw; */
+}
+
+section.cta a {
+    color: white;
+    text-decoration: none;
+}
+
+section.cta a:hover {
+    text-decoration: underline;
+}

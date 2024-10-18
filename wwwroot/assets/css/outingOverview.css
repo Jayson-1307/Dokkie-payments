@@ -1,0 +1,35 @@
+
+
+
+#outingsList {
+    margin-top: 20px;
+}
+
+#outingsList div {
+    background-color: var(--primary-color-light);
+    padding: 16px;
+    margin-bottom: 16px;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#outingsList h3 {
+    color: #ffffff;
+    margin: 0;
+}
+
+#outingsList button {
+    background-color: var(--secondary-color);
+    border: none;
+    color: white;
+    padding: 8px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+#outingsList button:hover {
+    background-color: var(--secondary-color-dark);
+}
