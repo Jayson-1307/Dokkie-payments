@@ -31,8 +31,9 @@ function renderOutingDetails(outing) {
     // Populate the "Paid By" select dropdown
     populatePaidByDropdown(outing.participants);
 
-    // Render the existing activities
+    // Render activities and participant spending
     renderActivities(outing.activities);
+    renderParticipantSpending(outing);
 }
 
 // Populate the "Paid By" select dropdown with participant names
@@ -60,6 +61,29 @@ function renderActivities(activities) {
     `).join('');
 }
 
+// Render participant spending
+function renderParticipantSpending(outing) {
+    const participantSpendingDiv = document.getElementById('participantSpending');
+    
+    // Calculate how much each participant spent
+    const spendingMap = outing.participants.reduce((acc, participant) => {
+        acc[participant] = 0;
+        return acc;
+    }, {});
+
+    // Add up the spending for each participant
+    outing.activities.forEach(activity => {
+        if (spendingMap[activity.paidBy] !== undefined) {
+            spendingMap[activity.paidBy] += activity.price;
+        }
+    });
+
+    // Display the spending for each participant
+    participantSpendingDiv.innerHTML = outing.participants.map(participant => `
+        <p>${participant}: $${spendingMap[participant].toFixed(2)} spent</p>
+    `).join('');
+}
+
 // Add activity to the outing and save it in localStorage
 function addActivityToOuting(outing) {
     const title = document.getElementById('activityTitle').value;
@@ -80,8 +104,9 @@ function addActivityToOuting(outing) {
         const updatedOutings = outings.map(o => (o.id === outing.id ? outing : o));
         saveOutings(updatedOutings);
 
-        // Re-render the updated activities
+        // Re-render the updated activities and participant spending
         renderActivities(outing.activities);
+        renderParticipantSpending(outing);
 
         // Clear input fields after submission
         document.getElementById('activityForm').reset();
@@ -90,7 +115,31 @@ function addActivityToOuting(outing) {
     }
 }
 
-// Main logic to load the outing details and handle activity addition
+// Add new participant to the outing
+function addParticipantToOuting(outing) {
+    const newParticipant = document.getElementById('newParticipant').value;
+    
+    if (newParticipant && !outing.participants.includes(newParticipant)) {
+        outing.participants.push(newParticipant);  // Add new participant to the outing
+
+        // Save updated outings back to localStorage
+        const outings = loadOutings();
+        const updatedOutings = outings.map(o => (o.id === outing.id ? outing : o));
+        saveOutings(updatedOutings);
+
+        // Re-render the participant dropdown, outing details, and spending
+        populatePaidByDropdown(outing.participants);
+        renderOutingDetails(outing);
+        renderParticipantSpending(outing);
+
+        // Clear input field after submission
+        document.getElementById('participantForm').reset();
+    } else {
+        alert('Please enter a unique participant name.');
+    }
+}
+
+// Main logic to load the outing details and handle activity addition and participant addition
 document.addEventListener('DOMContentLoaded', () => {
     const outingId = getOutingIdFromURL();
     if (!outingId) {
@@ -109,4 +158,8 @@ document.addEventListener('DOMContentLoaded', () => {
     // Handle activity addition
     const addActivityButton = document.getElementById('addActivityButton');
     addActivityButton.addEventListener('click', () => addActivityToOuting(outing));
+
+    // Handle new participant addition
+    const addParticipantButton = document.getElementById('addParticipantButton');
+    addParticipantButton.addEventListener('click', () => addParticipantToOuting(outing));
 });
