@@ -37,8 +37,16 @@ main {
     flex-direction: column;
 }
 
+.container {
+    min-height: 100%;
+}
+
 i {
     margin-left: 10px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: var(--primary-color-dark);
 }
 
 .btn {
