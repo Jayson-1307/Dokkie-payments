@@ -1,47 +1,38 @@
-# Opdracht blok 1 HBO-ICT SE
+# Dokkie payments
 
-![HBO-ICT](/wwwroot/public/dokkie.png)
+## table of contents
+- []()
+- []()
+- []()
+- []()
+- []()
 
-## Hoe is deze repository ingericht
+## What is this project
 
-- Story-board. Via het menu links (Plan > Issues) vind je alle user stories.
-- Broncode in de map `src` (Repository). Dit is een kale webapplicatie. Deze moet jij aanpassen.
-- Documentatie in de map `docs` (Repository). In de docs vindt je alle informatie en hou je jouw portfolio bij dit project.
+## Used Technologies
+For this project I only used HTML, CSS and JavaScript. I did not use a database for this project. Instead of that I used the localstorage, so that I could practice with it. 
+- **Javascript**: Used for client-side logic, including interactivity and dynamic content updates. I utilized the browser's localStorage to persist data without needing a database, allowing for practice with storing, retrieving, and manipulating data directly within the browser.
+- **HTML**: The standard markup language for creating and structuring content on the web.
+- **CSS/[LESS](https://lesscss.org/)**: CSS styles the visual presentation, while LESS is a preprocessor that adds dynamic features like variables, nesting and mixins for easier styling management.
+- **[Bootstrap](https://getbootstrap.com/)**
+- **Node.js**: The runtime for building scalable network applications.
 
-## Project setup
 
-1. Installeer Visual Studio Code, deze kun je downloaden via https://code.visualstudio.com/.
+## Installation
 
-2. Installeer de volgende plugins voor Visual Studio Code. Dit kan via de browser, of vanuit Visual Studio Code zelf in de `Extensions` sectie van de linker menubalk:
-    - ESLint: https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint
-    - EditorConfig: https://marketplace.visualstudio.com/items?itemName=editorconfig.editorconfig
+### Installing the project 
+```
+git clone https://github.com/Jayson-1307/Text-based-adventure-game.git
+cd text-based-adventure-game
+npm install
+```
 
-3. Installeer NodeJS, deze kun je voor jouw systeem downloaden via https://nodejs.org/en/download/prebuilt-installer. 
-   - **Let op!** Installeer versie `20.x.x`!
+### Running the project
+Run this command in the terminal:   
+```
+npm run dev
+```
 
-4. Installeer Git, voor uitleg zie de [knowledgebase](https://knowledgebase.hbo-ict-hva.nl/1_beroepstaken/software/manage_and_control/git/installeren/git_installeren/#git-installeren).
-
-5. Configureer Git, voor uitleg zie de [knowledgebase](https://knowledgebase.hbo-ict-hva.nl/1_beroepstaken/software/manage_and_control/git/installeren/git_installeren/#git-configureren).
-
-6. Maak een SSH key aan en koppel deze aan GitLab, voor uitleg zie de [knowledgebase](https://knowledgebase.hbo-ict-hva.nl/1_beroepstaken/software/manage_and_control/git/installeren/git_installeren/#git-koppelen-aan-gitlab).
-
-7. Clone dit project met Git naar je computer, dit kan je via de terminal doen met een `git clone` commando, vanuit Visual Studio Code zelf of met een visueel programma als Fork (https://git-fork.com/).
-
-8. Open na het clonen de map in Visual Studio Code met `File > Open Folder...`.
-
-9. Ga in de menubalk naar `View > Open View...` en zoek naar "NPM". Als je nu in de `Explorer` sectie van de linker menubalk op de `package.json` klikt, krijg je een extra paneel erbij met de naam "NPM Scripts". 
-
-10. In het "NPM Scripts"-paneel, klik met rechts op `package.json` en klik op `Run Install`, of voer handmatig `npm install` in een terminal uit.
-
-11. Klik nu op de pijl achter `dev`, of voer handmatig `npm run dev` in een termimal uit.
-    - Via de build tool [Vite](https://vitejs.dev/) wordt er een lokale server opgestart. Als je de URL uit de terminal (als het goed is: http://127.0.0.1:3000) in de browser opent, zie je de webapplicatie. Wijzigingen die je maakt in de code worden nu realtime (direct) herladen!
-
-12. Bekijk de map `wwwroot` en ga op zoek naar de index.html bestand.
-
-## Studiehandleiding
-
-In de Studiehandleiding op de DLO staat beschreven welke competenties je gaat ontwikkelen en wat de leeruitkomsten zijn voor dit blok.
-
-## Opdrachtomschrijving
-
-De volledige opdrachtomschrijving van dit project vind je in de [Knowledgebase](https://student-knowledgebase-pijlb-8498930bd08f0a73be9134e5e9c23c014d4.dev.hihva.nl/) onder _Leerroutes > Software Engineering > Opdracht 1_
+## Contact
+If you have any questions or saw something interesting, feel free to contact me!    
+U can send me an email: jvanolffen@outlook.com or send me a direct message on [LinkedIn](https://www.linkedin.com/in/jayson-van-olffen/)! 
